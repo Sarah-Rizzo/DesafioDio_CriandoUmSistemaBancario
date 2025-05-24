@@ -10,7 +10,7 @@ def menu():
       [6]\tNovo usuario
       [0]\tSair
       => """
-      return input(textwarp.dedent(menu))
+      return input(textwrap.dedent(menu))
       
 
 def depositar(saldo, valor, extrato,/):
@@ -41,7 +41,7 @@ def sacar(*,saldo, valor, extrato, limite, numero_saques, limite_saques):
 
       elif valor > 0:
             saldo -= valor
-            extrato += f"Saque: R$ {valor:.2f}\n"
+            extrato += f"Saque:\t\tR$ {valor:.2f}\n"
             numero_saques += 1
             print("\n Saque realizado com sucesso")
 
@@ -72,7 +72,7 @@ def criar_usuario(usuarios):
         print("Usuario criado com sucesso!")
 
 def filtrar_usuario(cpf, usuarios):
-      usuarios_filtrados = [usuario for usuario in usuario if usuario["cpf"] == cpf]
+      usuarios_filtrados = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
       return usuarios_filtrados[0] if usuarios_filtrados else None
       
         
@@ -110,7 +110,7 @@ def main():
     limite = 500
     extrato = ""
     numero_saques = 0
-    usuario = []
+    usuarios = []
     contas = []
 
     while True:
@@ -146,6 +146,9 @@ def main():
           elif opcao =="5":
                 listar_contas(contas)
 
+          elif opcao == "6":
+            criar_usuario(usuarios)
+
 
           elif opcao == "0":
                 break
@@ -153,4 +156,5 @@ def main():
                 print("Operação inválida, por favor selecione novamente a operação desejada.")
         
 
-       
+main()
+
