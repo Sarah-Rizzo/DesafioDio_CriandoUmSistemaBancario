@@ -1,3 +1,28 @@
+saldo = 0
+limite = 500
+extrato = ""
+numero_saques = 0
+LIMITE_SAQUES = 3
+
+def depositar(saldo, valor, extrato,/):
+        return saldo, extrato
+
+
+def sacar(*,saldo, valor, extrato, limite, numero_saques, LIMITE_SAQUES):
+                  return saldo, extrato
+
+def sair ():
+      return menu  
+
+def extrato():
+        pass
+
+def criar_usuario ():
+        pass
+
+def criar_contaCorrente ():
+        pass
+
 menu = """
 
 [1] Depositar
@@ -7,11 +32,6 @@ menu = """
 
 => """
 
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUES = 3
 
 while True:
 
